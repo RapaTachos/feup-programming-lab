@@ -96,25 +96,38 @@ namespace rgb {
 
     }
     void image::rotate_left() {
-        image *temp = new image( iheight, iwidth, color() );
-        for(int i=0; i<iheight ;i++)
-            for(int j=0; j<iwidth ;j++){
-                temp->at(i,j) = pixels[j][i];
+        image *inverted = new image( iwidth, iheight, color() );
+        for(int i=0; i<iwidth ;i++)
+            for(int j=0; j<iheight ;j++){
+                inverted->pixels[i][j] = pixels[iwidth-i-1][j];
             }
 
-        iwidth = temp->iwidth;
-        iheight = temp->iheight;
-        pixels = temp->pixels;
+        image( iheight, iwidth, color() );
+        iwidth = inverted->iheight;
+        iheight = inverted->iwidth;
+        for(int i=0; i<iwidth ;i++)
+            for(int j=0; j<iheight ;j++){
+                pixels[i][j] = inverted->at(j,i);
+            }
+
     }
     void image::rotate_right() {
         image *temp = new image( iheight, iwidth, color() );
         for(int i=0; i<iwidth ;i++)
             for(int j=0; j<iheight ;j++){
-                temp->at(j,i) = pixels[i][j];
+                temp->pixels[j][i] = pixels[i][j];
             }
-        pixels = temp->pixels;
+
+        image(temp->iwidth,temp->iheight,color());
         iwidth = temp->iwidth;
         iheight = temp->iheight;
+
+        for(int i=0; i< iwidth; i++){
+            for(int j=0; j< iheight; j++){
+                pixels[i][j] = temp->at( iwidth-i-1, j );
+            }
+        }
+
 
     }
     void image::mix(const image& img, int factor) {
