@@ -1,0 +1,199 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"build" : "external/gtest",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "external/gtest"
+				},
+				{
+					"build" : "external/gtest/googletest",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "external/gtest/googletest",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "progp1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "gtest",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "color_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-color_test-Debug-9811a7712b565ef3034e.json",
+					"name" : "color_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "docs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-docs-Debug-9d5f8d4359014f0c3530.json",
+					"name" : "docs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gtest::@b6daf43c893e1843d14a",
+					"jsonFile" : "target-gtest-Debug-e7378dbf517ea5276f05.json",
+					"name" : "gtest",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gtest_main::@b6daf43c893e1843d14a",
+					"jsonFile" : "target-gtest_main-Debug-246db55b8b409c18acd4.json",
+					"name" : "gtest_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image_diff::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image_diff-Debug-01621e2474217bdf57d9.json",
+					"name" : "image_diff",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image_dump::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image_dump-Debug-668a146971c5d0a3cbc7.json",
+					"name" : "image_dump",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image_test-Debug-78712821c97d99b4a850.json",
+					"name" : "image_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rgb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rgb-Debug-d31aeae13cbd0b8ad58f.json",
+					"name" : "rgb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_script::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_script-Debug-57c615581bf2fbfa2993.json",
+					"name" : "run_script",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "script_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-script_test-Debug-d263e6347db4dfb2ae36.json",
+					"name" : "script_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/seed/CLionProjects/progp1/cmake-build-debug",
+		"source" : "/home/seed/CLionProjects/progp1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
